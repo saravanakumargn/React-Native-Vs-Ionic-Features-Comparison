@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>React Native Vs Ionic</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <div style="position: sticky;top: 10px;">
+                    <div id="list-example" class="list-group">
+                        <a class="list-group-item list-group-item-action" href="#Components">UI Components</a>
+                        <a class="list-group-item list-group-item-action" href="#Native-Features">Native Features</a>
+                        <a class="list-group-item list-group-item-action" href="#Supports">Supports</a>
+                        <a class="list-group-item list-group-item-action" href="#Technology-Stack">Technology Stack</a>
+                        <a class="list-group-item list-group-item-action" href="#Running-Testing-Debug">Running, Testing & Debug</a>
+                        <a class="list-group-item list-group-item-action" href="#Whos-using">Who's using</a>
+                        <a class="list-group-item list-group-item-action" href="#System-Requirements">System Requirements</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-8">
+                <div data-spy="scroll" data-target="#list-example" data-offset="0" class="scrollspy-example">
+                    <section id="Components">
+                        <h2 class="mt-4">UI Components</h2>
+                        <hr class="my-3">
+                        <section>
+                            <h5 class="text-info mt-4">Performance</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li>A compelling reason for using React Native instead of WebView-based tools is to achieve 60 frames per second and a native look and feel to your apps</li>
+                                <li>React Native will render using native components</li>
+                                <li>These design patterns are imposed by the operating system (components like Listview, Picker, Toolbar, etc..). It will give the better performance and smoother animations</li>
+                                <li>Component explorer is available in <a target="_blank" href="https://play.google.com/store/apps/details?id=org.saravanakumar.reactnativecomponentsexplorer">https://play.google.com/store/apps/details?id=org.saravanakumar.reactnativecomponentsexplorer</a></li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>Components will render using HTML and CSS in WebView</li>
+                                <li>Hence, The User Experience and Performance is less than Native components (React Native)</li>
+                                <li>Component explorer is available in <a target="_blank" href="https://play.google.com/store/apps/details?id=com.ionichelper.ionic2components">https://play.google.com/store/apps/details?id=com.ionichelper.ionic2components</a></li>
+                            </ul>
+                        </section>
+                        <section>
+                            <h5 class="text-info mt-4">Availability & Usage</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li>Mostly all required components are available</li>
+                                <li>Only a few Components (like NavigatorIOS, DatePickerIOS, DrawerLayoutAndroid, etc..) not available for all Platforms. As the name implies, components are only available on Android/iOS. Need to use third-party cross-platform solution in JavaScript. <a target="_blank" href="https://facebook.github.io/react-native/docs/components-and-apis.html">Read more...</a></li>
+                                <li>By default Platform specific themes are not available (like Material style for android and iOS. Need to use the third-party Cross-Platform solution like as below:</li>
+                                <ul>
+                                    <li><a target="_blank" href="https://nativebase.io/">NativeBase</a></li>
+                                    <li><a target="_blank" href="https://react-native-training.github.io/react-native-elements/">React Native Elements</a></li>
+                                </ul>
+                                <li>
+                                    Platform-specific components need to implement like as below. And needs to test it properly
+                                    <pre><code>    if (Platform.OS === 'ios') {
+      AlertIOS.alert(title, message, buttons);
+    } else if (Platform.OS === 'android') {
+      AlertAndroid.alert(title, message, buttons, options);
+    }</code></pre>
+                                </li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>Mostly all required components are available</li>
+                                <li>Component themes are loading by HTML and CSS. Themes like Material for Android, iOS, and Windows supported from Ionic by default</li>
+                                <li>CSS is managed by SASS and very to customize</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section id="Native-Features">
+                        <h2 class="mt-4">Native Features</h2>
+                        <hr class="my-3">
+                        <section>
+                            <h5 class="text-info mt-4">API Access</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li>Native features such as Camera, Share, online/offline status, etc supported by default</li>
+                                <li>Native features are easily testable by Emulators</li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>Ionic Native is a TypeScript wrapper for Cordova/PhoneGap plugins that make adding any native functionality</li>
+                                <li>Needs some additional configuration or Native features not possible to test in browsers. Need to install an app in Emulator/Device</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section id="Supports">
+                        <h2 class="mt-4">Supports</h2>
+                        <hr class="my-3">
+                        <section>
+                            <h5 class="text-info mt-4">Components Supports</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li>Very Good support from ReactNative and ReactJS community</li>
+                                <li>Also, it has support for Windows Mobiles from Microsoft. Its called <code><a target="_blank" href="https://microsoft.github.io/reactxp/">ReactXP</a></code></li>
+                                <li>Also, Supports and Various teams are working together like Airbnb, Callstack, Expo, Facebook, GeekyAnts, Microsoft, Shoutem, Wix, etc.. <a target="_blank" href="http://facebook.github.io/react-native/blog/">Read More...</a></li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>It supports Android, iOS, Windows, PWA, and Web</li>
+                                <li>Very Good support from Angular and Ionic community</li>
+                            </ul>
+                        </section>
+                    </section>
+                    <section id="Technology-Stack">
+                        <h2 class="mt-4">Technology Stack</h2>
+                        <hr class="my-3">
+                        <section>
+                            <h5 class="text-info mt-4">Development</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li>Based on ReactJS, <a target="_blank" href="https://jsx.github.io/">JSX</a></li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>Based on Angular and Typescript</li>
+                            </ul>
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">React (RN)</th>
+                                        <th scope="col">React Native (RN)</th>
+                                        <th scope="col">Angular (IO)</th>
+                                        <th scope="col">Ionic (IO)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Star</th>
+                                        <td>79,929</td>
+                                        <td>55,261</td>
+                                        <td>29,387</td>
+                                        <td>31,975</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Issues</th>
+                                        <td>308</td>
+                                        <td>476</td>
+                                        <td>1,918</td>
+                                        <td>909</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Contributors</th>
+                                        <td>1,117</td>
+                                        <td>1,519</td>
+                                        <td>514</td>
+                                        <td>252</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+                        <section>
+                            <h5 class="text-info mt-4">Data/State Management</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li><a target="_blank" href="https://github.com/reactjs/react-redux">React Redux</a></li>
+                                <li><a target="_blank" href="https://github.com/mobxjs/mobx">MobX - Supports with Observable</a></li>
+                                <li><a href="https://github.com/realm/realm-js">Realm</a> Database is an alternative to SQLite and Core Data and Offline-first functionality</li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>Default Service (DI) to share the code across your app</li>
+                                <li>Redux for Angular called <a target="_blank" href="https://github.com/ngrx/platform">ngrx</a> available</li>
+                            </ul>
+                            <table class="table table-sm">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"></th>
+                                        <th scope="col">React Redux (RN)</th>
+                                        <th scope="col">MobX (RN)</th>
+                                        <th scope="col">Realm (RN)</th>
+                                        <th scope="col">ngrx (IO)</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Star</th>
+                                        <td>9,789</td>
+                                        <td>11,729</td>
+                                        <td>2,392</td>
+                                        <td>1,191</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Issues</th>
+                                        <td>10</td>
+                                        <td>37</td>
+                                        <td>224</td>
+                                        <td>21</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Contributors</th>
+                                        <td>92</td>
+                                        <td>98</td>
+                                        <td>46</td>
+                                        <td>59</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <h5 class="text-info mt-4">Offline</h5>
+                            <p class="lead text-dark font-italic">React Native</p>
+                            <ul>
+                                <li>On iOS, AsyncStorage is backed by native code that stores small values in a serialized dictionary and larger values in separate files</li>
+                                <li>On Android, will use either <a target="_blank" href="http://rocksdb.org/" target="_blank">RocksDB</a> or SQLite based on what is available</li>
+                                <li><a target="_blank" href="https://github.com/rt2zz/redux-persist">Redux Persist</a> to store fetched data in AsyncStorage</li>
+                            </ul>
+                            <p class="lead text-dark font-italic">Ionic</p>
+                            <ul>
+                                <li>Cordova has cordova-sqlite-storage plugin</li>
+                                <li>When running on the web or as a Progressive Web App, Storage will attempt to use IndexedDB, WebSQL, and localstorage, in that order</li>
+                            </ul>
+                        </section>
+                        <section id="Running-Testing-Debug">
+                            <h2 class="mt-4">Running, Testing & Debug</h2>
+                            <hr class="my-3">
+                            <section>
+                                <h5 class="text-info mt-4">Running</h5>
+                                <p class="lead text-dark font-italic">React Native</p>
+                                <ul>
+                                    <li>As this is the real native application, It can be run only in mobile simulators like iOS and Android. We cannot test in any browsers</li>
+                                    <li><a target="_blank" href="https://expo.io/">Expo</a> helps developers to build and share truly native apps. It syncs using QR code, your mobile and computer should be in the same wireless network</li>
+                                </ul>
+                                <p class="lead text-dark font-italic">Ionic</p>
+                                <ul>
+                                    <li>As this is WebView we can run in browsers (like chrome, safari)</li>
+                                    <li>For Testing, deployment, Package and Error monitor Various products are available from <a target="_blank" href="http://ionicframework.com/products">Ionic Pro</a> (<a target="_blank" href="https://ionicframework.com/about">Drifty co</a>)</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h5 class="text-info mt-4">Debug</h5>
+                                <p class="lead text-dark font-italic">React Native</p>
+                                <ul>
+                                    <li>We can use <a target="_blank" href="https://github.com/facebook/react-devtools/tree/master/packages/react-devtools" target="_blank">the standalone version of React Developer Tools</a> to debug the React component hierarchy.</li>
+                                    <li>Fast Hot reload after every changes (under 1 second) in emulator/device</li>
+                                </ul>
+                                <p class="lead text-dark font-italic">Ionic</p>
+                                <ul>
+                                    <li>Easily can test in Browser</li>
+                                    <li>Fast Hot reload in browser</li>
+                                    <li>Debug in browser Developer tools</li>
+                                </ul>
+                            </section>
+                            <section>
+                                <h5 class="text-info mt-4">Unit & E2E Testing</h5>
+                                <p class="lead text-dark font-italic">React Native</p>
+                                <ul>
+                                    <li><a target="_blank" href="http://facebook.github.io/jest/">Jest</a> from Facebook</li>
+                                    <li>E2E <a target="_blank" href="https://github.com/wix/detox">detox</a> from Wix</li>
+                                </ul>
+                                <p class="lead text-dark font-italic">Ionic</p>
+                                <ul>
+                                    <li>As It's just an Angular app, This is Angular Testing, not Ionic</li>
+                                    <li>The <a target="_blank" href="https://jasmine.github.io/">Jasmine test framework</a> provides everything needed to write basic tests. It ships with an HTML test runner that executes tests in the browser</li>
+                                    <li>Angular testing utilities create a test environment for the Angular application code under test. Use them to condition and control parts of the application as they interact within the Angular environment</li>
+                                    <li>The <a target="_blank" href="https://karma-runner.github.io/1.0/index.html">karma test runner</a> is ideal for writing and running unit tests while developing the application. It can be an integral part of the project's development and continuous integration processes. This guide describes how to set up and run tests with karma</li>
+                                    <li>Use <a target="_blank" href="http://www.protractortest.org/">protractor</a> (from angular) to write and run end-to-end (e2e) tests. End-to-end tests explore the application as users experience it. In e2e testing, one process runs the real application and a second process runs protractor tests that simulate user behavior and assert that the application responds in the browser as expected</li>
+                                </ul>
+                            </section>
+                        </section>
+                        <section id="Whos-using">
+                            <h2 class="mt-4">Who's using</h2>
+                            <hr class="my-3">
+                            <section>
+                                <h5 class="text-info mt-4">Showcase</h5>
+                                <p class="lead text-dark font-italic">React Native</p>
+                                <ul>
+                                    <li>Facebook, Instagram, Airbnb, Skype, Walmart, UberEATS, Wix.com, etc..</li>
+                                    <li><a target="_blank" href="https://facebook.github.io/react-native/showcase.html">https://facebook.github.io/react-native/showcase.html</a></li>
+                                </ul>
+                                <p class="lead text-dark font-italic">Ionic</p>
+                                <ul>
+                                    <li>Most of the apps are read-only not much user interaction/heavy usage</li>
+                                    <li><a target="_blank" href="http://showcase.ionicframework.com">http://showcase.ionicframework.com</a></li>
+                                </ul>
+                            </section>
+                        </section>
+                        <section id="System-Requirements">
+                            <h2 class="mt-4">System Requirements</h2>
+                            <hr class="my-3">
+                            <section>
+                                <h5 class="text-info mt-4">Hardware</h5>
+                                <p class="lead text-dark font-italic">React Native</p>
+                                <ul>
+                                    <li>For Android 3 GB RAM minimum, 8 GB RAM recommended; plus 1 GB for the Android Emulator</li>
+                                    <li>For iOS 4 GB RAM recommended</li>
+                                    <li>If we are developing App for both Android & iOS simultaneously then for better development experience 16GB Mac is recommended</li>
+                                </ul>
+                                <p class="lead text-dark font-italic">Ionic</p>
+                                <ul>
+                                    <li>As this is webview we can use the system with minimum requirement</li>
+                                </ul>
+                            </section>
+                        </section>
+                    </section>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div style="height: 500px;"></div>
+</body>
+
+</html>
